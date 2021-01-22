@@ -43,7 +43,7 @@ function register() {
             username: $('#form_reg [name="username"]').val(),
             password: $('#form_reg [name="password"]').val()
         };
-        $.post('http://api-breakingnews-web.itheima.net/api/reguser',
+        $.post('/api/reguser',
             data, function (res) {
                 // console.log(res);
                 if (res.status != 0) {
@@ -62,7 +62,7 @@ function enter() {
         let layer = layui.layer;
         $.ajax({
             type: 'POST',
-            url: 'http://api-breakingnews-web.itheima.net/api/login',
+            url: '/api/login',
             data: $(this).serialize(),
             success: function (res) {
                 // console.log(res.token);
